@@ -30,7 +30,7 @@ method start {
     my $proc = Proc::Async.new(
         'java',
         '-jar',
-        'tika-server-1.19.1.jar'
+        %?RESOURCES{'tika-server-1.19.1.jar'}
     );
 
     $proc.stdout.tap(

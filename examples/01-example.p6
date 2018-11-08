@@ -1,26 +1,24 @@
 #!/usr/bin/env perl6
 
 use v6;
-
-# say %?RESOURCES{'tika-server-1.19.1.jar'};
-
-use lib 'lib';
-use lib '../lib';
+use lib ['lib', '../lib'];
 use Tika;
+
 my $t = Tika.new;
-# $t.start;
+$t.start;
 
 # Handle Ctrl-C
-# signal(SIGINT).tap: {
-# 	$t.stop if $t.defined;
-# 	exit;
-# }
+signal(SIGINT).tap: {
+    $t.stop if $t.defined;
+    exit;
+}
 
 #TODO find if server is up or not...
-# sleep 2;
+sleep 3;
 
 say "Found {$t.version} server";
-#say $t.detectors;
+say $t.detectors;
+say $t.parsers;
 my @files = 'data/demo.docx', 'data/demo.pdf';
 for @files -> $file {
     my $filename = $*SPEC.catfile($*PROGRAM.IO.parent, $file);
@@ -37,7 +35,6 @@ for @files -> $file {
     say "Detected language #{$language}";
 }
 
-# sleep 15;
 LEAVE {
-    # $t.stop if $t.defined;
+    $t.stop if $t.defined;
 }
