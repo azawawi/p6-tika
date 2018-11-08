@@ -69,7 +69,7 @@ $ AUTHOR_TESTING=1 prove -e "perl6 -Ilib"
 ```
 
 ## See Also
-- ...
+- [Apache Tika Server API](https://wiki.apache.org/tika/TikaJAXRS).
 
 ## Author
 
