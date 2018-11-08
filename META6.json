@@ -8,18 +8,21 @@
     "name"          : "Tika",
     "perl"          : "6.c",
     "provides"      : {
-        "Tika"                  : "lib/Tika.pm6",
+        "Tika"                  : "lib/Tika.pm6"
     },
-    "depends"       : {
+    "depends"       : [
         "HTTP::UserAgent"
-    },
+    ],
+    "resources"     : [
+        "tika-server-1.19.1.jar"
+    ],
     "source-url"    : "git://github.com/azawawi/p6-tika.git",
     "tags"          : [
-      "apache"
+      "apache",
       "java",
-      "tika",
+      "tika"
     ],
-    "test-depends"  : [
+    "test-depends" : [
         "Test"
     ],
     "version"       : "0.1.0"
