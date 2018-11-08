@@ -2,7 +2,11 @@
 
 use v6;
 
+# say %?RESOURCES{'tika-server-1.19.1.jar'};
+
 use lib 'lib';
+use lib '../lib';
+use Tika;
 my $t = Tika.new;
 # $t.start;
 
@@ -17,8 +21,9 @@ my $t = Tika.new;
 
 say "Found {$t.version} server";
 #say $t.detectors;
-my @files = 'data/demo.docx', 'data/a.docx';
-for @files -> $filename {
+my @files = 'data/demo.docx', 'data/demo.pdf';
+for @files -> $file {
+    my $filename = $*SPEC.catfile($*PROGRAM.IO.parent, $file);
     my $content-type = $t.mime-type($filename);
     say "Detected stream type $content-type";
 
