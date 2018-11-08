@@ -5,11 +5,11 @@ platform: x64
 install:
   # Install rakudostar for faster CI builds.
   - choco install rakudostar
-  # Java runtime
+  # Install java 8 runtime
   - choco install jre8
-  # Change to build folder
+  # Change to the build folder
   - cd %APPVEYOR_BUILD_FOLDER%
-  # Refresh environment variables so zef works
+  # Refresh environment variables so that zef works
   - refreshenv
 
 build: off
