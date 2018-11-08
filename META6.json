@@ -10,6 +10,9 @@
     "provides"      : {
         "Tika"                  : "lib/Tika.pm6",
     },
+    "depends"       : {
+        "HTTP::UserAgent"
+    },
     "source-url"    : "git://github.com/azawawi/p6-tika.git",
     "tags"          : [
       "apache"
