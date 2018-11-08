@@ -1,0 +1,23 @@
+{
+    "auth"          : "github:azawawi",
+    "authors"       : [
+        "Ahmad M. Zawawi"
+    ],
+    "description"   : "Use Apache Tika REST API in Perl 6",
+    "license"       : "MIT",
+    "name"          : "Tika",
+    "perl"          : "6.c",
+    "provides"      : {
+        "Tika"                  : "lib/Tika.pm6",
+    },
+    "source-url"    : "git://github.com/azawawi/p6-tika.git",
+    "tags"          : [
+      "apache"
+      "java",
+      "tika",
+    ],
+    "test-depends"  : [
+        "Test"
+    ],
+    "version"       : "0.1.0"
+}
