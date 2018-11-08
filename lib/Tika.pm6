@@ -22,8 +22,8 @@ has HTTP::UserAgent $!ua;
 method BUILD {
     $!ua          = HTTP::UserAgent.new;
     $!ua.timeout  = 10;
-    $.hostname    = 'localhost';
-    $.port        = 9998;
+    $!hostname    = 'localhost';
+    $!port        = 9998;
 }
 
 method start {
